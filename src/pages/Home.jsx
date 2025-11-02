@@ -1,5 +1,12 @@
 import { ToggleTheme } from "@/components/ToggleTheme";
 import { StarBackground } from "@/components/StarBackground";
+import { NavBar } from "@/components/NavBar";
+import { HeroSection } from "@/components/HeroSection";
+import { AboutMeSection } from "@/components/AboutMeSection";
+import { SkillsSection } from "@/components/SkillsSection";
+import { ProjectsSection } from "@/components/ProjectsSection";
+import { ContactMeSection } from "@/components/ContactMeSection";
+import { Footer } from "@/components/Footer";
 
 export const Home = () => {
   return (
@@ -11,10 +18,19 @@ export const Home = () => {
       <StarBackground />
 
       {/* NavBar */}
+      <NavBar />
 
       {/* Main Content */}
+      <main>
+        <HeroSection />
+        <AboutMeSection />
+        <SkillsSection />
+        <ProjectsSection />
+        <ContactMeSection />
+      </main>
 
       {/* Footer */}
+      <Footer />
     </div>
   );
 };
