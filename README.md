@@ -2,7 +2,7 @@
 
 This is a personal portfolio website built using React. It showcases my projects, skills, and experience in web development.
 
-[link]()
+[link](https://my-portfolio-chi-swart-94.vercel.app/)
 
 ## Tech Stack
 
