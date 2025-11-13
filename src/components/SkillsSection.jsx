@@ -16,7 +16,7 @@ const skills = [
   { name: ".NET Core (8+)", category: "backend" },
   { name: "Java", category: "backend" },
   { name: "REST APIs", category: "backend" },
-  { name: "SQL", category: "backend" },
+  { name: "SQL Server/Azure SQL", category: "backend" },
 
   // Testing & Tools
   { name: "Jest", category: "testing" },

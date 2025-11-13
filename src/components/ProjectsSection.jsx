@@ -3,28 +3,38 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Eatzy - Food Delivery Platform",
+    title: "Eatzy - Food Delivery App",
     description:
-      "A full-stack food delivery application with real-time order tracking, secure payment processing, and intuitive user interface for both customers and restaurants.",
+      "A full-stack food delivery application built with React for the frontend and .NET Core for the backend.",
     image: "/projects/eatzy.png",
-    tags: ["React.js", ".NET Core", "SQL", "REST APIs", "Tailwind CSS"],
-    demoUrl: "#", // Add your demo URL if available
-    githubUrl: "#", // Add your GitHub URL if available
+    tags: ["React.js", ".NET Core", "SQL", "REST APIs"],
+    demoUrl: "https://eatzy-alpha.vercel.app/",
+    githubUrl: "https://github.com/reshmarav2497/Eatzy",
   },
   {
     id: 2,
-    title: "Browser Extension - Enterprise Grade",
+    title: "Todo App",
     description:
-      "Enterprise-grade Chrome/Edge extension integrated with Gmail, ServiceNow, and Salesforce. Features DOM manipulation and secure data handling.",
-    image: "/projects/enterprise.png", // Using a placeholder image
-    tags: ["Blazor WASM", "JavaScript", "C#", ".NET Core"],
+      "A full-stack Todo Application built using React + TypeScript (Vite) for the frontend and .NET 8 Web API for the backend.",
+    image: "/projects/todo.png",
+    tags: ["React.js", ".NET Core", "SQL Server/Azure SQL", "REST APIs"],
+    demoUrl: "https://todo-app-rho-sable.vercel.app/",
+    githubUrl: "https://github.com/reshmarav2497/TodoApp",
   },
   {
     id: 3,
+    title: "Browser Extension - Enterprise Grade",
+    description:
+      "Enterprise-grade Chrome/Edge extension integrated with Gmail, ServiceNow, and Salesforce. Features DOM manipulation and secure data handling.",
+    image: "/projects/enterprise.png",
+    tags: ["Blazor WASM", "JavaScript", "C#", ".NET Core"],
+  },
+  {
+    id: 4,
     title: "Outlook Web Add-in - Email Validator",
     description:
       "Enterprise-wide Outlook web add-in for email validation and security, deployed across Windows, Mac, and Web platforms.",
-    image: "/projects/outlook.png", // Using a placeholder image
+    image: "/projects/outlook.png",
     tags: ["React.js", "Redux", "TypeScript", "Office JS API"],
   },
 ];
@@ -48,7 +58,7 @@ export const ProjectsSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover p-5"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -58,16 +68,19 @@ export const ProjectsSection = () => {
                 />
               </div>
 
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+              <div>
+                <div className="flex flex-wrap gap-2 mb-4 mt-4">
+                  {project.tags.map((tag, key) => (
+                    <span
+                      key={key}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <h3 className="text-xl font-semibold mb-4"> {project.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>

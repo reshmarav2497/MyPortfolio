@@ -8,7 +8,7 @@ export const ToggleTheme = () => {
   useEffect(() => {
     const userTheme = localStorage.getItem("theme");
 
-    if (userTheme == "dark") {
+    if (!userTheme || userTheme == "dark") {
       setIsDarkMode(true);
       document.documentElement.classList.add("dark");
     } else {
